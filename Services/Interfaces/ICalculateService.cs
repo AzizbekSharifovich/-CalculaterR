@@ -17,4 +17,7 @@ public interface ICalculatRService
     decimal Sum(decimal firstNumber, decimal secondNumber, decimal thridnumber);
 
     decimal Sum(params decimal[] numbers);
+    decimal CalculateSquareRoot(decimal number);
+
+    decimal CalculatePower(decimal number, decimal extent);
 }

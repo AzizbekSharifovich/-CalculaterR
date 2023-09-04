@@ -1,38 +1,36 @@
-﻿using Calculater.Brokers;
-using Calculater.Services.Interfaces;
+﻿using Calculater.Services.Interfaces;
 
 namespace Calculater.Services;
-public class CalculatRService : ICalculatRService, IAdvancedCalculatRService
+public class CalculatRService : ICalculatRService
 {
-    public decimal FirstValue { get; set; }
-    public decimal SecondValue { get; set; }
+    public decimal FirstNumber { get; set; }
+    public decimal SecondNumber { get; set; }
     public string Operation { get; set; }
     public decimal Number { get; set; }
 
     public CalculatRService(decimal firstNumber, string operation, decimal secondNumber)
     {
-        FirstValue = firstNumber;
+        FirstNumber = firstNumber;
         Operation = operation;
-        SecondValue = secondNumber;
+        SecondNumber = secondNumber;
     }
 
     public CalculatRService(decimal firstNumber, string operation)
     {
-        FirstValue = firstNumber;
+        FirstNumber = firstNumber;
         Operation = operation;
     }
-
-    public CalculatRService(decimal firstUserValue) {}
     
     public void Calculate()
     {
-        string template = $"{FirstValue} {Operation} {SecondValue} =";
-        Console.WriteLine("There are calculation processed:");
+        string template = $"{this.FirstNumber} {Operation} {this.SecondNumber} =";
 
-        decimal result = CalculateValues(Operation, this.FirstValue, this.SecondValue);
+        Console.WriteLine("There are calculation process:");
+
+        decimal result = CalculateValues(Operation, this.FirstNumber, this.SecondNumber);
 
         if (Operation.Equals("sqrt"))
-            Console.WriteLine($"Root value of {this.FirstValue} = {result}");
+            Console.WriteLine($"Square root value of {this.FirstNumber} = {result}");
         else
             Console.WriteLine($"{template} {result}");
     }
@@ -41,13 +39,13 @@ public class CalculatRService : ICalculatRService, IAdvancedCalculatRService
     {
         return operation switch
         {
-            "sqrt" => CalculateSquareRoot(number: this.Number),
-            "+" => Sum(this.FirstValue, this.SecondValue),
-            "-" => Substract(this.FirstValue, this.SecondValue),
-            "*" => Multiply(this.FirstValue, this.SecondValue),
-            "/" => Divide(this.FirstValue, this.SecondValue),
-            "%" => CalculateRemainder(this.FirstValue, this.SecondValue),
-            "pow" => CalculatePower(this.FirstValue, this.SecondValue),
+            "sqrt" => CalculateSquareRoot(firstNumber),
+            "+" => Sum(this.FirstNumber, this.SecondNumber),
+            "-" => Substract(this.FirstNumber, this.SecondNumber),
+            "*" => Multiply(this.FirstNumber, this.SecondNumber),
+            "/" => Divide(this.FirstNumber, this.SecondNumber),
+            "%" => CalculateRemainder(this.FirstNumber, this.SecondNumber),
+            "pow" => CalculatePower(this.FirstNumber, this.SecondNumber),
             _ => 0
         };
     }

@@ -3,14 +3,13 @@ public static class ReportR
 {
     public static void ShowMenu()
     {
-        Console.WriteLine("Universal Calculator Application");
+        Console.WriteLine("Calculator Application: ");
 
-        Console.WriteLine("\n1. Basic Calculater:");
-        Console.WriteLine("2. Advanced Calculater:");
-        Console.WriteLine("3. Multiplication table:");
-        Console.WriteLine("4. Exit:");
+        Console.WriteLine("1. Basic and Advanced Calculater:");
+        Console.WriteLine("2. Multiplication table:");
+        Console.WriteLine("3. Exit:");
 
-        Console.WriteLine("\nChoose option:");
+        Console.WriteLine("Choose option:");
     }
 
     public static void ExitFromProgram()
@@ -21,6 +20,6 @@ public static class ReportR
 
     public static void DefaultCase()
     {
-        Console.WriteLine("We have only 4 options, check and try again!!!");
+        Console.WriteLine("We have only 3 options, check and try again!");
     }
 }
