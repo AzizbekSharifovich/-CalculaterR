@@ -1,6 +1,6 @@
 ﻿namespace Calculater.Services.Interfaces;
 
-public interface IMultiplicationTableService
+public interface IMultiplicatRService
 {
     void ShowMultiplicationTable();
 }
