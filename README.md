@@ -11,3 +11,7 @@ Have a look at `Program.cs` file and you can see how I have used:
 ## Demo
 
 ![demo](./Assets/demo.png)
+
+1. My model scheme:
+
+![diagram](./Assets/diagram.png)
