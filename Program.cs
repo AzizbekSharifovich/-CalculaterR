@@ -36,7 +36,7 @@ public class Program
                 case 2:
                      Console.WriteLine("Multiplication Table Generator");
                    
-                     IMultiplicationTableService table = new MultiplicatRService();
+                     IMultiplicatRService table = new MultiplicatRService();
                     table.ShowMultiplicationTable(); break;
                 case 3:
                     ReportR.ExitFromProgram();break;

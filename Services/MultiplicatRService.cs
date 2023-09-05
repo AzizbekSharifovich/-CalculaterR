@@ -1,7 +1,7 @@
 ﻿using Calculater.Services.Interfaces;
 
 namespace Calculater.Services;
-public class MultiplicatRService : IMultiplicationTableService
+public class MultiplicatRService : IMultiplicatRService
 {
     public MultiplicatRService(){}
 
