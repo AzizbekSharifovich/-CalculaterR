@@ -16,7 +16,7 @@ Have a look at `Program.cs` file and you can see how I have used:
 
 1. My model scheme:
 
-![diagram](./Assets/diagram.png)
+![demo](./Assets/diagram.png)
 
 ### V1.0
 
